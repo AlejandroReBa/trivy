@@ -12,11 +12,14 @@ builds:
     goos:
       - darwin
       - linux
+      - freebsd
+      - openbsd
     goarch:
       - amd64
       - 386
       - arm
       - arm64
+      - ppc64le
     goarm:
       - 7
     ignore:
@@ -41,6 +44,7 @@ nfpms:
       386: 32bit
       arm: ARM
       arm64: ARM64
+      ppc64le: PPC64LE
       darwin: macOS
       linux: Linux
       openbsd: OpenBSD
@@ -57,6 +61,7 @@ archives:
       386: 32bit
       arm: ARM
       arm64: ARM64
+      ppc64le: PPC64LE
       darwin: macOS
       linux: Linux
       openbsd: OpenBSD

@@ -106,7 +106,7 @@ See [here](#continuous-integration-ci) for details.
   - See [Quick Start](#quick-start) and [Examples](#examples)
 - Fast
   - The first scan will finish within 10 seconds (depending on your network). Consequent scans will finish in single seconds.
-  - Unlike other scanners that take long to fetch vulnerability information (~10 minutes) on the first run, and encourage you to maintain the a durable vulnerability database, Trivy is stateless and requires no maintenance or preparation.
+  - Unlike other scanners that take long to fetch vulnerability information (~10 minutes) on the first run, and encourage you to maintain a durable vulnerability database, Trivy is stateless and requires no maintenance or preparation.
 - Easy installation
   - `apt-get install`, `yum install` and `brew install` is possible (See [Installation](#installation))
   - **No pre-requisites** such as installation of DB, libraries, etc. (The exception is that you need `rpm` installed to scan images based on RHEL/CentOS. This is automatically included if you use our installers or the Trivy container image. See [Vulnerability Detection](#vulnerability-detection) for background information.)
@@ -258,6 +258,7 @@ Total: 1 (UNKNOWN: 0, LOW: 0, MEDIUM: 1, HIGH: 0, CRITICAL: 0)
 </details>
 
 ### Docker
+#### Docker Hub
 
 Replace [YOUR_CACHE_DIR] with the cache directory on your machine.
 
@@ -300,6 +301,14 @@ Total: 1 (UNKNOWN: 0, LOW: 0, MEDIUM: 1, HIGH: 0, CRITICAL: 0)
 ```
 
 </details>
+
+#### GitHub Container Registry
+The same image is hosted on GitHub Container Registry as well.  
+https://github.com/orgs/aquasecurity/packages/container/package/trivy
+
+```
+$ docker pull ghcr.io/aquasecurity/trivy:latest
+```
 
 ## Filesystem
 Scan a filesystem (such as a host machine, a virtual machine image, or an unpacked container image filesystem).
